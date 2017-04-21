@@ -1,0 +1,58 @@
+{
+  "project_info": {
+    "project_number": "70845159924",
+    "firebase_url": "https://ringcontrol-30e4c.firebaseio.com",
+    "project_id": "ringcontrol-30e4c",
+    "storage_bucket": "ringcontrol-30e4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70845159924:android:55d59ce9da77f7a6",
+        "android_client_info": {
+          "package_name": "com.fjbatresv.callrest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70845159924-3fju9qcl0v56scil4nj5u80pna8tn1bb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fjbatresv.callrest",
+            "certificate_hash": "39740622baa408aa16dd2c99ca3d9992067e0c22"
+          }
+        },
+        {
+          "client_id": "70845159924-e0c7rhnqg5fdd9b49motkcc4pp0cj8li.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fjbatresv.callrest",
+            "certificate_hash": "182a3caca2aed199efeb3e1b14100599663ac33f"
+          }
+        },
+        {
+          "client_id": "70845159924-0bqm8lh02dculngfhhs2j3rup5acnfdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj-dR0Nc52kDQs6Mwc85VY9rnb5U2AO8Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
