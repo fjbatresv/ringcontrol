@@ -8,6 +8,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:2.3.1'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
         classpath 'com.google.gms:google-services:3.0.0'
+        classpath 'com.google.firebase:firebase-plugins:1.1.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -18,6 +19,7 @@ allprojects {
         jcenter()
         maven { url "https://www.jitpack.io" }
         maven { url 'https://maven.fabric.io/public' }
+        mavenCentral()
     }
 }
 
@@ -31,7 +33,7 @@ ext{
     compileSdkVersion = 25
     buildToolsVersion = "25.0.2"
     supportLibraryVersion = "25.1.1"
-    firebaseVersion = "10.2.0"
+    firebaseVersion = "10.2.6"
     firebaseUiVersion = "1.2.0"
     fabDialVersion = "1.0.4"
     aboutVersion = "1.0.2"
@@ -39,9 +41,12 @@ ext{
     butterknifeVersion = '7.0.1'
     eventBusVersion = '3.0.0'
     daggerVersion = '2.0.1'
+    dbflowVersion = '3.0.0-beta3'
     glideVersion = '3.6.1'
     jsr250Version = '1.0'
     retrofitVersion = "2.1.0"
     facebookVersion = "4.19.0"
     twitterVersion = "2.3.0@aar"
+    AppIntroVersion = "4.1.0"
+
 }

@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">Callrest</string>
+    <string name="app_name">Ring Control</string>
+    <string name="login_signin">Iniciar Sesión</string>
+    <string name="login_account">Con Cuenta</string>
+    <string name="login_phone">Con Teléfono</string>
+    <string name="no_play_services">Por favor instala Play Services e intenta nuevamente</string>
+    <string name="common_google_play_services_unknown_issue">Por favor actualiza Play Services e intenta nuevamente</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="general.dashboard.blocked">Se han bloqueado</string>
+    <string name="general.dashboard.llamadas">llamadas</string>
+    <string name="firebase_error_user_null">No se ha autenticado</string>
+    <string name="welcome_message">Bienvenido de nuevo</string>
 </resources>
