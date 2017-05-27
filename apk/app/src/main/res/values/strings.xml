@@ -15,4 +15,5 @@
     <string name="general.dashboard.llamadas">llamadas</string>
     <string name="firebase_error_user_null">No se ha autenticado</string>
     <string name="welcome_message">Bienvenido de nuevo</string>
+    <string name="user_invalid">Sesión invalida</string>
 </resources>

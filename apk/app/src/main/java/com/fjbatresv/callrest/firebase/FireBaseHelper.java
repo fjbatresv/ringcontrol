@@ -52,7 +52,7 @@ public class FireBaseHelper {
     private boolean conectado = false;
 
     public FireBaseHelper(Context context) {
-        Trace myTrace = FirebasePerformance.getInstance().newTrace("CONNECT_FIREBASE");
+        Trace myTrace = FirebasePerformance.getInstance().newTrace(ConfigKeys.CONNECT_FIREBASE);
         myTrace.start();
         this.mAuth = FirebaseAuth.getInstance();
         this.data = FirebaseDatabase.getInstance();
@@ -67,7 +67,7 @@ public class FireBaseHelper {
                 boolean connected = dataSnapshot.getValue(Boolean.class);
                 if (connected) {
                     conectado = true;
-                }else{
+                } else {
                     conectado = false;
                 }
                 Log.e("conectadoList", String.valueOf(conectado));
@@ -108,7 +108,7 @@ public class FireBaseHelper {
         }
     }
 
-    public void logout(FirebaseListener listener){
+    public void logout(FirebaseListener listener) {
         mAuth.signOut();
         listener.onSuccess();
     }
@@ -130,6 +130,34 @@ public class FireBaseHelper {
             //try{FirebaseCrash.log(log);}catch(Exception ex){}
             Log.e("sendLog", log);
         }
+    }
+
+    public void getListas(final FirebaseSearchListener listener) {
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (!conectado){
+            listener.onSuccess(null);
+            sendLog("not connected");
+        }
+        final ArrayList<com.fjbatresv.callrest.entities.List> listas =
+                new ArrayList<com.fjbatresv.callrest.entities.List>();
+        this.database.child("listas").child(user.getUid()).addListenerForSingleValueEvent(
+                new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        for (DataSnapshot data : dataSnapshot.getChildren()) {
+                            com.fjbatresv.callrest.entities.List lista =
+                                    data.getValue(com.fjbatresv.callrest.entities.List.class);
+                            listas.add(lista);
+                        }
+                        listener.onSuccess(listas);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        sendError(databaseError.getMessage());
+                        listener.onError(databaseError.getMessage());
+                    }
+                });
     }
 
 }

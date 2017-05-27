@@ -5,7 +5,7 @@ import android.app.Application;
 import com.fjbatresv.callrest.firebase.DI.FireBaseModule;
 import com.fjbatresv.callrest.lib.DI.LibsModule;
 
-import com.fjbatresv.callrest.main.DI.DaggerMainComponent;
+//import com.fjbatresv.callrest.main.DI.DaggerMainComponent;
 import com.fjbatresv.callrest.main.DI.MainComponent;
 import com.fjbatresv.callrest.main.DI.MainModule;
 import com.fjbatresv.callrest.main.ui.MainActivity;
@@ -57,11 +57,12 @@ public class App extends Application {
 
     //Components injection
     public MainComponent mainComponent(MainView view){
-        return DaggerMainComponent.builder()
+        /*return DaggerMainComponent.builder()
                 .appModule(appModule)
                 .libsModule(libsModule)
                 .fireBaseModule(fireBaseModule)
                 .mainModule(new MainModule(view))
-                .build();
+                .build();*/
+        return null;
     }
 }
